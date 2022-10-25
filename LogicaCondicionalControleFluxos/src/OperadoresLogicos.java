@@ -10,9 +10,7 @@ public class OperadoresLogicos {
         int n2 = 2;
         double f1 = 1.5;
         double f2 = 8.5;
-        boolean resultado;
-
-
+      
         System.out.println("b1 && b2: " + (b1 && b2));
         System.out.println("b1 && b3: " + (b1 && b3));
         System.out.println("b2 || b3: " + (b1 || b2));
@@ -21,10 +19,8 @@ public class OperadoresLogicos {
         System.out.println("b1 ^ b4: " + (b4 ^ b1));
         System.out.println("!b1: " + (!b1));
         System.out.println("!b2: " + (!b2));
-        System.out.println("n2 > n2 || f2 < f1 " + (resultado = (n1 > n2) || (f1 < f2)));
-        System.out.println("n1 + n2 < f1 - f2 && true " + (resultado = (n1 + n2) < (f1 - f2) && true));
+        System.out.println("n2 > n2 || f2 < f1 " + ((n1 > n2) || (f1 < f2)));
+        System.out.println("n1 + n2 < f1 - f2 && true " + ( (n1 + n2) < (f1 - f2) && true));
     
     }    
-
-
 }
