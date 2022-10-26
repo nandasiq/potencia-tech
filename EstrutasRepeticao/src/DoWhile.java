@@ -31,6 +31,39 @@ public class DoWhile {
 
         System.out.println("A media dos numeros e: " + media / n.length);
 
+
+        /*
+         * Par e Ímpar: Faça um programa que peça N números inteiros.
+         * Calcule e mostre a quantidade de números pares
+         * e a quantidade de números impares.
+         */
+
+         System.out.println("Digite o tamanho da lista: ");
+         int tamanho = entrada.nextInt();
+         int tamanhoCopia = tamanho;
+
+         int [] grupo = new int[tamanho];
+         int par = 0;
+         int impar = 0;
+         int contador = 0;
+
+         do{
+            System.out.print("Digite um numero: ");
+            grupo[tamanhoCopia - 1] = entrada.nextInt();
+            tamanhoCopia --;
+         } while (tamanhoCopia > 0);
+
+         do {
+            if (grupo[contador] % 2 == 0){
+                par ++;
+            } else {
+                impar++;
+            }
+            contador++;
+         } while (contador < tamanho);
+         System.out.printf("Temos %d numeros pares e %d impares.", par, impar);
+
+
         entrada.close();
     }
 
