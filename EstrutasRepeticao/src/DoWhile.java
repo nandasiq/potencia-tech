@@ -29,7 +29,7 @@ public class DoWhile {
             i--;
         } while (i != 0);
 
-        System.out.println("A media dos numeros e: " + media / n.length);
+        System.out.println("A media dos numeros e: \n" + media / n.length);
 
 
         /*
