@@ -19,6 +19,20 @@ public class For {
             System.out.printf("%d X %d = %d\n", n, i, (n*i));
         }
 
+        /*
+         *  Faça um programa que calcule o fatorial de um número 
+         * inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120
+         */
+
+        System.out.println("Digite um numero, sera impresso seu fatorial.");
+        int fatorial = entrada.nextInt();
+        int valor = fatorial;
+
+        for(int i = fatorial - 1; i > 0; i--){
+            valor = valor * i;
+        }
+        System.out.println("Fatorial: " + valor);
+
 
         entrada.close();
     }
