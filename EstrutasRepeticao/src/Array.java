@@ -59,10 +59,14 @@ public class Array {
                 aleatorio[i] = entrada.nextInt();
             } while (aleatorio[i] < 0 || aleatorio[i] > 100);
         }
+        /* funcional, mas o codigo abaixo e menor e menos confuso.    
         i = 0;
         for (; i < aleatorio.length; i++){
             System.out.print(aleatorio[i] + " " + (aleatorio[i] + 1) + "\n");
-        }       
+        }       */ 
+        for (int n : aleatorio){
+            System.out.print(n + " " + (n + 1) + "\n");
+        }
         entrada.close();
     }
 }
