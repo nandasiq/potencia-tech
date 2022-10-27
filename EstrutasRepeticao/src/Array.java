@@ -28,16 +28,23 @@ public class Array {
         System.out.println("Digite um conjunto de seis letras");
         do {
             palavra = entrada.next();
+            palavra = palavra.toLowerCase();
         } while (palavra.length() != 6);
         
-        int consoante;
+        int consoante = 0;
         char [] car = new char[6];
-        
+        i++;
         for (; i < palavra.length(); i++){
             car[i] = palavra.charAt(i);
-            
+            if (car[i] > 97 && car[i] < 122) {
+                if (car[i] != 101 && car[i] != 105 && car[i]  != 111 && car[i] != 117){
+                    consoante++;
+                    System.out.println(car[i]);
+                }
+                
+            }
         } 
-
+        System.out.println("Total consoantes: " + consoante);
 
         entrada.close();
     }
