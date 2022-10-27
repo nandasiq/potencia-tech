@@ -11,18 +11,24 @@ public class DoWhile {
 
         int[] n = new int[5];
         int i = 0;
+        int maior = 0;
         int media = 0;
 
         do {
             System.out.println("Digite cinco numeros: ");
             n[i] = entrada.nextInt();
+            if (n[i] > maior) {
+                maior = n[i];
+            }
             i++;
         } while (i < 5);
-        System.out.println("o maior numero e: "
+        System.out.println("O maior numero e: " + maior);
+/*  Esse jeito funciona, mas o metodo acima e mais rapido      
+     System.out.println("o maior numero e: "
         + Math.max(n[4],
                 Math.max(n[3],
                         Math.max(n[2],
-                                Math.max(n[1], n[0])))));
+                                Math.max(n[1], n[0]))))); */
 
         do {
             media += n[i - 1];
