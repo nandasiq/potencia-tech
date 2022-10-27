@@ -62,8 +62,7 @@ public class Array {
         i = 0;
         for (; i < aleatorio.length; i++){
             System.out.print(aleatorio[i] + " " + (aleatorio[i] + 1) + "\n");
-        }
-
+        }       
         entrada.close();
     }
 }
