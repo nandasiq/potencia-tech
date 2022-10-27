@@ -40,11 +40,29 @@ public class Array {
                 if (car[i] != 101 && car[i] != 105 && car[i]  != 111 && car[i] != 117){
                     consoante++;
                     System.out.println(car[i]);
-                }
-                
+                }                
             }
         } 
         System.out.println("Total consoantes: " + consoante);
+
+        /*
+         * Números Aleatórios: Faça um Programa que leia 20 números inteiros aleatórios
+         * (entre 0 e 100) armazene-os num vetor. Ao final, mostre os números e seus sucessores.
+         */
+
+        int [] aleatorio = new int[20];
+        i = 0;
+
+        for (; i < aleatorio.length; i++){
+            System.out.println("Digite um numero entra 0-100");
+            do{
+                aleatorio[i] = entrada.nextInt();
+            } while (aleatorio[i] < 0 || aleatorio[i] > 100);
+        }
+        i = 0;
+        for (; i < aleatorio.length; i++){
+            System.out.print(aleatorio[i] + " " + (aleatorio[i] + 1) + "\n");
+        }
 
         entrada.close();
     }
