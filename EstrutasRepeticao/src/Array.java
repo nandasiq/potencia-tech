@@ -19,7 +19,26 @@ public class Array {
         for (i = i -1; i >= 0; i--){
             System.out.println(vetor[i]);
         }
+
+        /*
+         * Consoantes: Faça um Programa que leia um vetor de 6 caracteres,
+         * e diga quantas consoantes foram lidas. Imprima as consoantes.
+         */
+        String palavra;
+        System.out.println("Digite um conjunto de seis letras");
+        do {
+            palavra = entrada.next();
+        } while (palavra.length() != 6);
+        
+        int consoante;
+        char [] car = new char[6];
+        
+        for (; i < palavra.length(); i++){
+            car[i] = palavra.charAt(i);
+            
+        } 
+
+
         entrada.close();
     }
-
 }
