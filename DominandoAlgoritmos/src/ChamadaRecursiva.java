@@ -5,9 +5,10 @@ public class ChamadaRecursiva {
 
         Scanner numero = new Scanner(System.in);
 
-
         int N = numero.nextInt();
         System.out.println(somatorio(N));
+        
+        numero.close();
 	}
 
 		static int somatorio(int numero) {
@@ -15,7 +16,7 @@ public class ChamadaRecursiva {
             return 0;
         } else {
             return numero + somatorio(numero - 1);
-        }
+        }        
     }
 
 }
