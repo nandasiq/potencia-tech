@@ -1,6 +1,6 @@
 package relacoesHerancaAssociacaoInterface.exercicio1;
 
-public class Teste {
+public class FuncionarioTeste {
 	public static void main(String[] args) {
 		Funcionario fFaxineiro = new Faxineiro();
 		Funcionario fVendendor = new Vendedor();
