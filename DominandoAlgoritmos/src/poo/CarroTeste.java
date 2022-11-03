@@ -21,7 +21,14 @@ public class CarroTeste {
 		c3.setModelo("pajero");
 		c3.setTanque(60);
 		
+		System.out.println("\nCor carro 2: " + c2.getCor());
+		System.out.println("Modelo carro 2: " + c2.getModelo());
+		System.out.println("Tanque carro 2: " + c2.getTanque());
 		System.out.println("Tanque cheio carro 2: " + c2.calcularTanque(4.2));
+		
+		System.out.println("\nCor carro 3: " + c3.getCor());
+		System.out.println("Modelo carro 3: " + c3.getModelo());
+		System.out.println("Tanque carro 3: " + c3.getTanque());
 		System.out.println("Tanque cheio carro 3: " + c3.calcularTanque(5.2));
 		
 		entrada.close();
