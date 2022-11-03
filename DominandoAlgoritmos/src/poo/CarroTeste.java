@@ -13,13 +13,10 @@ public class CarroTeste {
 		
 		
 		System.out.println(Carro.calcularTanque(c.tanque, comb));
-		System.out.println(calcularTanque(comb));
+		//System.out.println(calcularTanque(comb));
 		
 		entrada.close();
 	}
 	
-	 public double calcularTanque(double gasolina) {
-			return Carro.tanque * gasolina;
-		}
-
+	
 }
