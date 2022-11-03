@@ -11,7 +11,7 @@ public class Carro {
 	
 	Carro(String cor, String modelo, int tanque) {
 		this.cor = cor;
-		this.modelo =modelo;
+		this.modelo = modelo;
 		this.tanque = tanque;
 	}
 	
@@ -36,7 +36,10 @@ public class Carro {
 		return tanque;
 	}
 		
-	 double calcularTanque(int tanque, double gasolina) {
+	double calcularTanque(double gasolina) {
+		return this.tanque * gasolina;
+	}
+	static double calcularTanque(int tanque, double gasolina) {
 		return tanque * gasolina;
 	}
 	
