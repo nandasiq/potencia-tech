@@ -1,60 +1,101 @@
 package collection.lists;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class ExercicioTemperatura {
 	
 	/*
 	 * Receba temperatura media dos 6 primeiros meses do ano
-	 * e amarzene-os em uma lista. Calcule a media semestral das
 	 * temperaturas acima desta media, e em que mes elas ocorreram
 	 * mostrar por extenso 1- janeiro 2- fevereiro, por exemplo
 	 */
 	
 	public static void main(String[] args) {
 		
-		List<Mes> meses = new ArrayList<>() {{
-			add(new Mes(1,"janeiro", 28.7));
-			add(new Mes(2, "fevereiro", 24.6));
-			add(new Mes(3, "marco", 23.1));
-			add(new Mes(4, "abril", 22.4));
-			add(new Mes(5, "maio", 21.2));
-			add(new Mes(6, "junho", 20.3));
-		}};
+		Scanner entrada = new Scanner(System.in);
+
+		List<Double> temps = new ArrayList<>();
 		
-		Iterator<Double> iterator = meses.iterator(temperatura);
+		System.out.println("Digite as temperaturas: ");
+//		for (int i = 0; i < 6; i++) {
+//			temps.add(entrada.nextDouble());
+//		}
+
+		temps.add(26.1);
+		temps.add(28.2);
+		temps.add(27.3);
+		temps.add(26.4);
+		temps.add(25.5);
+		temps.add(29.6);
 		
 		
+		Iterator<Double> iTemp = temps.iterator();
+		Double next = 0d;
+		while(iTemp.hasNext()){
+			next += iTemp.next();
+		}
+		Double media = next / temps.size();
+		System.out.println("Temp. media semestre: " + media);
+		
+		
+	
+		
+		
+		List<Mes> meses = new ArrayList<>();
+		meses.add(new Mes("Janeiro"));
+		meses.add(new Mes("Fevereiro"));
+		meses.add(new Mes("Marco"));
+		meses.add(new Mes("Abril"));
+		meses.add(new Mes("Maio"));
+		meses.add(new Mes("Junho"));
+		
+		
+		List<Integer> mesesQuentes = new ArrayList<>();
+		for(Double temp: temps) {
+			if(temp > media) {
+				mesesQuentes.add(temps.indexOf(temp));
+				
+			}
+		}
+	
+		for(int i = 0; i < mesesQuentes.size(); i++) {
+			meses.[i] mesesQuentes.get(i);
+			
+		}
+		System.out.println("\n" + mesesQuentes);
+		
+		System.out.println("\n" + temps);
+		
+		entrada.close();
 		
 	}
-
+	
+	
 }
 
 class Mes {
-	private int mes;
-	private String nome;
-	private Double temperatura;
-	
-	public Mes(int mes, String nome, Double temperatura) {
-		this.mes = mes;
+//	int n;
+	String nome;
+	Double temperatura;
+
+	public Mes(String nome) {
 		this.nome = nome;
-		this.temperatura = temperatura;
-	}
-
-	public int getMes() {
-		return mes;
-	}
-
-	public void setMes(int mes) {
-		this.mes = mes;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
+//	public int getN() {
+//		return n;
+//	}
+//	public void setN(int n) {
+//		this.n = n;
+//	}
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -67,5 +108,10 @@ class Mes {
 		this.temperatura = temperatura;
 	}
 	
-	
+	public String toSrting() {
+		return toString();
+	}
 }
+
+
+
