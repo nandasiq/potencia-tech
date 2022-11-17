@@ -1,6 +1,6 @@
 package collections.set;
 
-public class LinPre {
+public class LinPre implements Comparable<LinPre>{
 	String nome;
 	int anoCriacao;
 	String ide;
@@ -35,12 +35,21 @@ public class LinPre {
 		this.ide = ide;
 	}
 	
+	
 	@Override
 	public String toString() {
 		
-		return nome + " -"
+		return nome + " - "
 				+ anoCriacao
-				+ "- " + ide;
+				+ " - " + ide;
+	}
+
+
+	@Override
+	public int compareTo(LinPre o) {
+		int n = o.nome.compareToIgnoreCase(getNome());
+		if(n != 0) return 1;
+		else return 0;
 	}
 
 }

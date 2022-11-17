@@ -1,8 +1,6 @@
 package collections.set;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 public class ExercicioLinguagemFavorita {
 
@@ -20,7 +18,7 @@ public class ExercicioLinguagemFavorita {
 	*/
 
 		
-		Set<LinPre> lin = new LinkedHashSet<>();
+		Set<LinPre> lin = new HashSet<>();
 		lin.add(new LinPre("Java", 1995, "Eclipse"));
 		lin.add(new LinPre("Python", 1991, "PyChram"));
 		lin.add(new LinPre("JavaScript", 1991, "VisualStudio"));
@@ -29,9 +27,14 @@ public class ExercicioLinguagemFavorita {
 		System.out.println(lin);
 		
 		
+		System.out.println();
 		System.out.println("Ordem natural nome");
-		
-		
+		Set<LinPre> nome = new TreeSet<>();
+		nome.add(new LinPre("java", 95, "eclipse"));
+		nome.add(new LinPre("python", 91, "pyChram"));
+		nome.add(new LinPre("javaScript", 92, "visualStudio"));
+
+		System.out.println(nome);
 		
 //		System.out.println("Ordem natural IDE");
 //		System.out.println("Ordem ano de criacao e nome");

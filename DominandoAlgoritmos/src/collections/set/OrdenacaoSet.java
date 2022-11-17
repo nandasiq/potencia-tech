@@ -42,7 +42,7 @@ public class OrdenacaoSet {
 		System.out.println("\nOrdem natural (em duracao de epsodio)");
 		Set<Serie> seriesTop3 = new TreeSet<>() {{
 			add(new Serie("Sens8", "Ficcao", 50));
-			add(new Serie("Grace and Frankie", "Comedia", 50));
+			add(new Serie("Grace and Frankie", "Comedia", 30));
 			add(new Serie("Simpsons", "Desenho", 15));
 			
 		}};
