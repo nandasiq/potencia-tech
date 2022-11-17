@@ -75,12 +75,12 @@ public class OrdenacaoSet {
 		seriesTop5.add(new Serie("Tres Espias", "Desenho", 25));
 		seriesTop5.add(new Serie("Dragon Ball-z", "Anime", 20));
 		seriesTop5.add(new Serie("Chaves", "Comedia", 30));
-//		for(Serie serie: seriesTop5) {
-//			System.out.println(serie.getNome() 
-//					+ " " + serie.getGenero()
-//					+ " " + serie.getDuracao());	
-//		}
-		System.out.println(seriesTop5);
+		for(Serie serie: seriesTop5) {
+			System.out.println(serie.getNome() 
+					+ " " + serie.getGenero()
+					+ " " + serie.getDuracao());	
+		}
+//		System.out.println(seriesTop5);
 	}
 
 }

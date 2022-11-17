@@ -87,8 +87,9 @@ class ComparatorGenero implements Comparator<Serie> {
 
 		
 		int genero = o1.getGenero().compareTo(o2.getGenero());
+		int duracao = Integer.compare(o1.getDuracao(), o2.getDuracao());
 		if(genero != 0) return genero;
-		else return 0;
+		else return duracao;
 		
 		
 	}
