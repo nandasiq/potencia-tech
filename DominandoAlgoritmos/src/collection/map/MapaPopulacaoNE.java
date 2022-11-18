@@ -3,14 +3,6 @@ package collection.map;
 import java.util.*;
 
 public class MapaPopulacaoNE {
-	/*
-	 * Exiba o estado com maior populacao e sua quantidade
-	 * Exiba a soma das populacoes desses estados
-	 * Exiba a media da populacao desse dicionario de estados
-	 * Remova os estados com a populacao menor que 4 000 000
-	 * Apague o dicionario de estados
-	 * Confira se o dicionario esta vazio
-	 */
 	public static void main(String[] args) {
 		System.out.println("Crie um dicionario e relacione estados populacoes");
 		Map<String, Integer> ne = new HashMap<>() {{
@@ -48,11 +40,60 @@ public class MapaPopulacaoNE {
 		Map<String, Integer> alfa = new TreeMap(neLinked);
 		System.out.println(alfa);
 		
-		System.out.println("\nExiba o estado com menor populacao e sua quantidade");
 		
+		System.out.println("\nExiba o estado com menor populacao e sua quantidade");
+		Integer minPop = Collections.min(ne.values());
+		Set<Map.Entry<String, Integer>> itMinPop = ne.entrySet();
+		String minEs = "";
+		for(Map.Entry<String, Integer> entrada: itMinPop)
+			if(entrada.getValue() == minPop) {
+				minEs = entrada.getKey();
+				System.out.println(minEs + " " + minPop);
+			}
+		
+		
+		System.out.println("\nExiba o estado com maior populacao e sua quantidade");
+		Integer maxPop = Collections.max(ne.values());
+		Set<Map.Entry<String, Integer>> itMaxPop = ne.entrySet();
+		String maxEs = "";
+		for(Map.Entry<String, Integer> entrada: itMaxPop) {
+			if(entrada.getValue() == maxPop) {
+				maxEs = entrada.getKey();
+				System.out.println(maxEs + " " + maxPop);
+			}
+		}
+		
+		
+		System.out.println("\nExiba a soma das populacoes desses estados");
+		Integer soma = 0;
+		Iterator<Integer> itSoma = ne.values().iterator();
+		while(itSoma.hasNext()) {
+			soma += itSoma.next();
+		}
+		System.out.println(soma);
+		
+		
+		System.out.println("\nExiba a media da populacao desse dicionario de estados");
+		System.out.println(soma/ne.size());
+		
+		
+		System.out.println("\nRemova os estados com a populacao menor que 4.000.000");
+		Iterator<Integer> it4mi = ne.values().iterator();
+		while(it4mi.hasNext()) {
+			if(it4mi.next() < 4000000) {
+				it4mi.remove();
+			}
+		}
+		System.out.println(ne);
+		
+		System.out.println("\nApague o dicionario de estados");
+		ne.clear();
+		
+		
+		System.out.println("\nConfira se o dicionario esta vazio");
+		System.out.println(ne.isEmpty());
 		
 	}
 
 }
-
 
