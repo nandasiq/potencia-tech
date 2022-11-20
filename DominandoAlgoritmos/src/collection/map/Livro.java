@@ -53,7 +53,7 @@ public class Livro {
 }
 
 
-class ComparatorNome implements Comparator<Map.Entry<String, Livro>> {
+class ComparatorTitulo implements Comparator<Map.Entry<String, Livro>> {
 
 	@Override
 	public int compare(Map.Entry<String, Livro> o1, Map.Entry<String, Livro> o2) {

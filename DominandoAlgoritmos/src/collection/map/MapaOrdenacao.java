@@ -36,7 +36,7 @@ public class MapaOrdenacao {
 		
 		System.out.println("\nExiba ordem alfabetica nomes dos livros");
 		// tem que usar set, pois vamos analisar o set de Livro e manipular algo la dentro
-		Set<Map.Entry<String, Livro>> titulo = new TreeSet<>(new ComparatorNome());
+		Set<Map.Entry<String, Livro>> titulo = new TreeSet<>(new ComparatorTitulo());
 		titulo.addAll(autores.entrySet());
 		for(Map.Entry<String, Livro> livro: titulo) {
 			System.out.println(livro.getKey() + " - " + livro.getValue().getNome());
