@@ -2,12 +2,29 @@ package exceptions;
 
 import java.io.*;
 
+import javax.swing.JOptionPane;
+
 
 public class CheckedException {
 
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) {
 		String nomeArquivo = "teste.txt";
-		imprimirConsole(nomeArquivo);
+		try {
+			imprimirConsole(nomeArquivo);
+			// exception file not found e generica da mae
+			// exceptionIO. Entao se ela vier primeiro ok. Mas se ExceptionIO 
+			// viesse primeiro, sempore cairia nela
+		} catch (FileNotFoundException e){  
+			JOptionPane.showMessageDialog(null, "Revise o nome "
+					+ "do arquivo. " + e.getCause());
+			
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, "Ocorreu um erro inesperado. "
+					+ "Avise o suporte " + e.getCause());
+			e.printStackTrace();
+		} finally {
+			System.out.println("Choegou no finally");
+		}
 		
 		System.out.println("Apesa da exception (ou nao), o programa continua");
 	
