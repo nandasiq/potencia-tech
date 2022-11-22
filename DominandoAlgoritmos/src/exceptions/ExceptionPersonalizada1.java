@@ -16,7 +16,7 @@ public class ExceptionPersonalizada1 {
 		String nomeArquivo = JOptionPane.showInputDialog("Nome do arquivo: ");
 
 		imprimirConsole(nomeArquivo);
-		System.out.println("Apesa da exception (ou nao), o programa continua");
+		System.out.println("Apesar da exception (ou nao), o programa continua");
 
 	}
 
@@ -39,7 +39,8 @@ public class ExceptionPersonalizada1 {
 					e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Ocorreu um erro inesperado. " + "Avise o suporte " + e.getMessage());
+			JOptionPane.showMessageDialog(null, "Ocorreu um erro inesperado. " 
+					+ "Avise o suporte " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
