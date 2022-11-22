@@ -1,0 +1,4 @@
+Esse e um arquivo txt apenas para teste
+uma segunda linha desse arquivo
+A penultima linha
+A quarta e ultima linha
